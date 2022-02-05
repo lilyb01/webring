@@ -1,14 +1,28 @@
+var referrer = document.referrer.split("/").slice(0,3).join("/")
+
+// sanity check
+function checksite() {
+    var i = sites.findIndex(x => x.url === referrer);
+    if (i === -1) {
+        return false;
+    }
+    return true;
+}
+
 function getsites() {
     return sites;
 }
 
-// i haven't done the referral stuff yet so these next two functions also aren't done
 function nextsite() {
-    return null;
+    var i = sites.findIndex(x => x.url === referrer);
+    var site = sites[i==sites.length-1?0:i+1];
+    return site.url;
 }
 
 function prevsite() {
-    return null;
+    var i = sites.findIndex(x => x.url === referrer);
+    var site = sites[i==0?sites.length-1:i-1];
+    return site.url;
 }
 
 function randsite() {
