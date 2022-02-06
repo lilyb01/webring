@@ -9,7 +9,7 @@ var sites = [
         url: 'https://poppy.heypumpk.in',
     },
     {
-        name: "elinor",
+        name: "Elinor Wonders Why Videos | PBS KIDS",
         url: "https://pbskids.org/video/elinor-wonders-why"
     },
     {
