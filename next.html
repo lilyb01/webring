@@ -6,6 +6,7 @@
         window.location = nextsite();
     } else {
         var oops = document.createElement("p");
-        oops.appendChild("this site is not in the webring. it probably hasn't been accepted yet.")
+        var oopstext = document.createTextNode("this site is not in the webring. it probably hasn't been accepted yet.");
+        oops.appendChild(oopstext);
     }
 </script>
