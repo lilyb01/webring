@@ -1,12 +1,12 @@
 <title>you are currently being teleported. please do not bring bread with you.</title>
 <script type="text/javascript" src="members.js"></script>
 <script type="text/javascript" src="assets/main.js"></script>
+<div id="text"></div>
 <script>
     if (checksite()) {
         window.location = prevsite();
     } else {
-        var oops = document.createElement("p");
-        var oopstext = document.createTextNode("this site is not in the webring. it probably hasn't been accepted yet.");
-        oops.appendChild(oopstext);
+        var oops = document.getElementById("text");
+        oops.innerHTML += "this site is not in the webring. it probably hasn't been accepted yet.";
     }
 </script>
