@@ -5,6 +5,10 @@ var sites = [
         rss: 'https://heypumpk.in/feed.xml'
     },
     {
+        name: "poppy.heypumpk.in, lily's beta corner of the web <3",
+        url: 'https://poppy.heypumpk.in',
+    },
+    {
         name: "elinor",
         url: "https://pbskids.org/video/elinor-wonders-why"
     },
