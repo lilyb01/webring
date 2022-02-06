@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>untitled webring thing</title>
-        <script type="text/javascript" src="members.js"></script>
-        <script type="text/javascript" src="assets/main.js"></script>
+        <title>winter webring</title>
+        <link type="text/css" rel="stylesheet" href="/assets/style.css">
+        <script type="text/javascript" src="/members.js"></script>
+        <script type="text/javascript" src="/assets/main.js"></script>
         <!--<script>
             console.log("sanity check bc i'm losing my mind");
             console.log("next site function:");
@@ -13,20 +14,23 @@
         </script>-->
     </head>
     <body>
-        <div id="main">
+        <div id="transrights">
             <p>this webring is still a work in progress, however, functionality seems to be working.</p>
-            <p><a href="random.html">random site???????</a></p>
+            <p><a href="/random.html">random site???????</a></p>
             <p>list of sites on the webring:</p>
             <ul id="list"></ul>
         </div>
         <script>
             var sites = getsites();
-            console.log(sites);
 
             sites.forEach((site, index, array) => {
-                console.log(site);
-                document.getElementById("list").insertAdjacentHTML('beforeend',
-                '<li><a href="' + site.url + '">' + site.name + '</a></li>');
+                var sitestring;
+                sitestring = '<li><a href="' + site.url + '">' + site.name + '</a>';
+                if (site.rss) {
+                    sitestring = sitestring + ' - <a href="' + site.rss + '">rss</a>';
+                }
+                sitestring = sitestring + '</li>';
+                document.getElementById("list").insertAdjacentHTML('beforeend', sitestring);
             });
         </script>
     </body>
